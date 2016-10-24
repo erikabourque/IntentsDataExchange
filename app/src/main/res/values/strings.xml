@@ -7,6 +7,10 @@
     <string name="geoBtn">Launch Maps</string>
     <string name="inputBtn">Launch Input Activity</string>
     <string name="daveBtn">Launch Dave Activity</string>
+    <string name="returnOneBtn">Return One</string>
+    <string name="returnTwoBtn">Return Two</string>
     <string name="url">http://www.google.ca/</string>
     <string name="geo">Montreal, Quebec, Canada</string>
+    <string name="oneStr">Activity 2: One, 1, uno, un/une</string>
+    <string name="twoStr">Activity 2: Two, 2 , due, deux</string>
 </resources>

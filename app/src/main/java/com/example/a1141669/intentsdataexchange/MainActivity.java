@@ -5,6 +5,9 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     static final int COUNT_REQUEST = 1;
@@ -14,6 +17,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    protected void onActivityResult(int request, int resultCode, Intent data)
+    {
+        // Both do same thing, check for either one
+        if ((request == COUNT_REQUEST) || (request == IMAGE_REQUEST))
+        {
+            // Make sure there is a result
+            if (resultCode == RESULT_OK)
+            {
+                TextView tv = (TextView) findViewById(R.id.resultTxtView);
+                tv.setText(data.getExtras().getString("result"));
+            }
+        }
     }
 
     public void launchCountActivity(View v)
